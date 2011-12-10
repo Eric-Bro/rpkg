@@ -1,0 +1,1044 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0107BEC1493C096000962A7 /* Postinstall_Extra_EFI_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */; };
+		C0107BED1493C096000962A7 /* Postinstall_SLE_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */; };
+		C0107BEE1493C096000962A7 /* Preinstall_Net_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */; };
+		C0107BEF1493C096000962A7 /* Empty.strings in Resources */ = {isa = PBXBuildFile; fileRef = C089E736148DBB9300B30899 /* Empty.strings */; };
+		C0107BF01493C096000962A7 /* Postinstall_Net_SLE.sh in Resources */ = {isa = PBXBuildFile; fileRef = C0107BEA1493C052000962A7 /* Postinstall_Net_SLE.sh */; };
+		C0107BF11493C096000962A7 /* Postinstall_Net_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C0107BEB1493C06E000962A7 /* Postinstall_Net_Extra.sh */; };
+		C0107BF41493E8B4000962A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0107BF21493E8B4000962A7 /* main.m */; };
+		C089E725148CF7FA00B30899 /* Postinstall_Extra_EFI_.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */; };
+		C089E726148CF7FA00B30899 /* Postinstall_SLE_.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */; };
+		C089E728148CF7FA00B30899 /* Preinstall_Net_Extra.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */; };
+		C089E72B148D029400B30899 /* EBKextPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C089E72A148D029400B30899 /* EBKextPackageBuilder.m */; };
+		C089E72C148D1AE100B30899 /* EBKextPackageBuilder.h in Sources */ = {isa = PBXBuildFile; fileRef = C089E729148D029400B30899 /* EBKextPackageBuilder.h */; };
+		C089E72D148D1AE100B30899 /* EBKextPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C089E72A148D029400B30899 /* EBKextPackageBuilder.m */; };
+		C089E738148DBC0900B30899 /* Empty.strings in Resources */ = {isa = PBXBuildFile; fileRef = C089E736148DBB9300B30899 /* Empty.strings */; };
+		C089E739148E5E2A00B30899 /* Postinstall_Extra_EFI_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */; };
+		C089E73A148E5E2A00B30899 /* Postinstall_SLE_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */; };
+		C089E73C148E5E2A00B30899 /* Preinstall_Net_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */; };
+		C089E770148F220800B30899 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C089E76F148F220800B30899 /* GHUnit.framework */; };
+		C0B8029E148FA60D00D60426 /* GHUnit.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = C089E76F148F220800B30899 /* GHUnit.framework */; };
+		C0B802AA148FA70A00D60426 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AB21484981F008D90A1 /* Cocoa.framework */; };
+		C0B802B0148FA70B00D60426 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0B802AE148FA70B00D60426 /* InfoPlist.strings */; };
+		C0B802B5148FA72B00D60426 /* EBPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7914828447008D90A1 /* EBPackageBuilder.m */; };
+		C0B802B6148FA72B00D60426 /* EBPackageBuilderLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ECD4A9148A687A00251346 /* EBPackageBuilderLocale.m */; };
+		C0B802B7148FA72B00D60426 /* EBKextPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C089E72A148D029400B30899 /* EBKextPackageBuilder.m */; };
+		C0B802B8148FA72B00D60426 /* EBKextPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80AA31483C8EE008D90A1 /* EBKextPackage.m */; };
+		C0B802B9148FA72B00D60426 /* EBPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6C14826444008D90A1 /* EBPackage.m */; };
+		C0B802BA148FA72B00D60426 /* EBPackageBuilderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6F1482647C008D90A1 /* EBPackageBuilderItem.m */; };
+		C0B802BB148FA72B00D60426 /* EBPackageTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6214822A95008D90A1 /* EBPackageTemplates.m */; };
+		C0B802BC148FA72B00D60426 /* EBTerminalCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7414828034008D90A1 /* EBTerminalCommander.m */; };
+		C0B802BD148FA72B00D60426 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7F14833876008D90A1 /* NSString+Utils.m */; };
+		C0B802BE148FA72B00D60426 /* NSArray+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A9F1483BF47008D90A1 /* NSArray+Mapping.m */; };
+		C0B802C5148FA75B00D60426 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AA81483DCBD008D90A1 /* CoreServices.framework */; };
+		C0B802C6148FA75B00D60426 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AA61483DC15008D90A1 /* Security.framework */; };
+		C0B802C7148FA75B00D60426 /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80A7614828064008D90A1 /* SecurityFoundation.framework */; };
+		C0B802C8148FA78D00D60426 /* EBPackageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A7814828447008D90A1 /* EBPackageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802C9148FA78D00D60426 /* EBPackageBuilderLocale.h in Headers */ = {isa = PBXBuildFile; fileRef = C0ECD4A8148A687A00251346 /* EBPackageBuilderLocale.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802CA148FA78D00D60426 /* shared_enums.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A7B14833223008D90A1 /* shared_enums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802CB148FA78D00D60426 /* EBKextPackageBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C089E729148D029400B30899 /* EBKextPackageBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802CC148FA78D00D60426 /* EBKextPackage.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80AA21483C8EE008D90A1 /* EBKextPackage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802CD148FA78D00D60426 /* Kexts_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80AA51483D6F7008D90A1 /* Kexts_defines.h */; };
+		C0B802CE148FA78D00D60426 /* EBPackage.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A6B14826444008D90A1 /* EBPackage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802CF148FA78D00D60426 /* EBPackageBuilderItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A6E1482647C008D90A1 /* EBPackageBuilderItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B802D0148FA78D00D60426 /* EBPackageTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A6114822A95008D90A1 /* EBPackageTemplates.h */; };
+		C0B802D1148FA78D00D60426 /* EBPackageTemplates_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A6414822C3E008D90A1 /* EBPackageTemplates_defines.h */; };
+		C0B802D2148FA78D00D60426 /* EBTerminalCommander.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A7314828034008D90A1 /* EBTerminalCommander.h */; };
+		C0B802D3148FA78D00D60426 /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A7E14833876008D90A1 /* NSString+Utils.h */; };
+		C0B802D4148FA78D00D60426 /* NSArray+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C80A9E1483BF47008D90A1 /* NSArray+Mapping.h */; };
+		C0B802DE148FA8CF00D60426 /* packworks.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B802DD148FA8CF00D60426 /* packworks.h */; };
+		C0B802E5148FAAE900D60426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80A4F148229A3008D90A1 /* Foundation.framework */; };
+		C0B802F2148FAB1600D60426 /* packworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B802A9148FA70A00D60426 /* packworks.framework */; };
+		C0B802F5148FBCD000D60426 /* packworks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0B802A9148FA70A00D60426 /* packworks.framework */; };
+		C0B803001490ED6000D60426 /* logo_bk.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B802FF1490ED6000D60426 /* logo_bk.png */; };
+		C0B803011490ED6100D60426 /* logo_bk.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B802FF1490ED6000D60426 /* logo_bk.png */; };
+		C0B803031490ED9000D60426 /* logo_bk.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0B802FF1490ED6000D60426 /* logo_bk.png */; };
+		C0B803071492513500D60426 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		C0C80A50148229A3008D90A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80A4F148229A3008D90A1 /* Foundation.framework */; };
+		C0C80A53148229A3008D90A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A52148229A3008D90A1 /* main.m */; };
+		C0C80A6314822A95008D90A1 /* EBPackageTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6214822A95008D90A1 /* EBPackageTemplates.m */; };
+		C0C80A6D14826444008D90A1 /* EBPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6C14826444008D90A1 /* EBPackage.m */; };
+		C0C80A701482647C008D90A1 /* EBPackageBuilderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6F1482647C008D90A1 /* EBPackageBuilderItem.m */; };
+		C0C80A7514828034008D90A1 /* EBTerminalCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7414828034008D90A1 /* EBTerminalCommander.m */; };
+		C0C80A7714828065008D90A1 /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80A7614828064008D90A1 /* SecurityFoundation.framework */; };
+		C0C80A7A14828447008D90A1 /* EBPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7914828447008D90A1 /* EBPackageBuilder.m */; };
+		C0C80A8014833876008D90A1 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7F14833876008D90A1 /* NSString+Utils.m */; };
+		C0C80AA01483BF48008D90A1 /* NSArray+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A9F1483BF47008D90A1 /* NSArray+Mapping.m */; };
+		C0C80AA41483C8EE008D90A1 /* EBKextPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80AA31483C8EE008D90A1 /* EBKextPackage.m */; };
+		C0C80AA71483DC15008D90A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AA61483DC15008D90A1 /* Security.framework */; };
+		C0C80AA91483DCBE008D90A1 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AA81483DCBD008D90A1 /* CoreServices.framework */; };
+		C0C80ACC1485128C008D90A1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AB21484981F008D90A1 /* Cocoa.framework */; };
+		C0C80AD21485128F008D90A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0C80AD01485128F008D90A1 /* InfoPlist.strings */; };
+		C0C80AD81485128F008D90A1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C0C80AD61485128F008D90A1 /* Credits.rtf */; };
+		C0C80AE9148513EC008D90A1 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80AE8148513EC008D90A1 /* GHUnitTestMain.m */; };
+		C0ECD4AA148A687A00251346 /* EBPackageBuilderLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ECD4A9148A687A00251346 /* EBPackageBuilderLocale.m */; };
+		C0ECD4AF148A7A9700251346 /* EBPackmeUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ECD4AD148A79E800251346 /* EBPackmeUnitTest.m */; };
+		C0ECD4B0148A92D600251346 /* EBPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7914828447008D90A1 /* EBPackageBuilder.m */; };
+		C0ECD4B1148A92D600251346 /* EBPackageBuilderLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ECD4A9148A687A00251346 /* EBPackageBuilderLocale.m */; };
+		C0ECD4B2148A92D600251346 /* EBKextPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80AA31483C8EE008D90A1 /* EBKextPackage.m */; };
+		C0ECD4B3148A92D600251346 /* EBPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6C14826444008D90A1 /* EBPackage.m */; };
+		C0ECD4B4148A92D600251346 /* EBPackageBuilderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6F1482647C008D90A1 /* EBPackageBuilderItem.m */; };
+		C0ECD4B5148A92D600251346 /* EBPackageTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6214822A95008D90A1 /* EBPackageTemplates.m */; };
+		C0ECD4B6148A92D600251346 /* EBTerminalCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7414828034008D90A1 /* EBTerminalCommander.m */; };
+		C0ECD4B7148A92D600251346 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A7F14833876008D90A1 /* NSString+Utils.m */; };
+		C0ECD4B8148A92D600251346 /* NSArray+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A9F1483BF47008D90A1 /* NSArray+Mapping.m */; };
+		C0ECD4BF148A930C00251346 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AA81483DCBD008D90A1 /* CoreServices.framework */; };
+		C0ECD4C0148A930C00251346 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80AA61483DC15008D90A1 /* Security.framework */; };
+		C0ECD4C1148A930C00251346 /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80A7614828064008D90A1 /* SecurityFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0B802F8148FBEDC00D60426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0C80A42148229A2008D90A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B802A8148FA70A00D60426;
+			remoteInfo = packworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C089E724148CF7DD00B30899 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = scripts;
+			dstSubfolderSpec = 7;
+			files = (
+				C089E725148CF7FA00B30899 /* Postinstall_Extra_EFI_.sh in CopyFiles */,
+				C089E726148CF7FA00B30899 /* Postinstall_SLE_.sh in CopyFiles */,
+				C089E728148CF7FA00B30899 /* Preinstall_Net_Extra.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B802F4148FBCC400D60426 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				C0B802F5148FBCD000D60426 /* packworks.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C0B803021490ED8A00D60426 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				C0B803031490ED9000D60426 /* logo_bk.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C80A49148229A3008D90A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C0C80AE41485132F008D90A1 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0B8029E148FA60D00D60426 /* GHUnit.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C0107BEA1493C052000962A7 /* Postinstall_Net_SLE.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Net_SLE.sh; path = "src/Kexts additions/Scripts/Postinstall_Net_SLE.sh"; sourceTree = "<group>"; };
+		C0107BEB1493C06E000962A7 /* Postinstall_Net_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Net_Extra.sh; path = "src/Kexts additions/Scripts/Postinstall_Net_Extra.sh"; sourceTree = "<group>"; };
+		C0107BF21493E8B4000962A7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rpkg/main.m; sourceTree = SOURCE_ROOT; };
+		C0107BF31493E8B4000962A7 /* rpkg-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "rpkg-Prefix.pch"; path = "rpkg/rpkg-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Extra_EFI_.sh; path = "src/Kexts additions/Scripts/Postinstall_Extra_EFI_.sh"; sourceTree = "<group>"; };
+		C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_SLE_.sh; path = "src/Kexts additions/Scripts/Postinstall_SLE_.sh"; sourceTree = "<group>"; };
+		C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Preinstall_Net_Extra.sh; path = "src/Kexts additions/Scripts/Preinstall_Net_Extra.sh"; sourceTree = "<group>"; };
+		C089E729148D029400B30899 /* EBKextPackageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBKextPackageBuilder.h; path = "src/Kexts additions/EBKextPackageBuilder.h"; sourceTree = "<group>"; };
+		C089E72A148D029400B30899 /* EBKextPackageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBKextPackageBuilder.m; path = "src/Kexts additions/EBKextPackageBuilder.m"; sourceTree = "<group>"; };
+		C089E736148DBB9300B30899 /* Empty.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Empty.strings; path = "src/Kexts additions/Scripts/Empty.strings"; sourceTree = "<group>"; };
+		C089E73D148F088F00B30899 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.md; sourceTree = "<group>"; };
+		C089E76F148F220800B30899 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = packmeUnitTest/GHUnit.framework; sourceTree = "<group>"; };
+		C0B802A9148FA70A00D60426 /* packworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = packworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B802AD148FA70A00D60426 /* packworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "packworks-Info.plist"; sourceTree = "<group>"; };
+		C0B802AF148FA70B00D60426 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C0B802B1148FA70B00D60426 /* packworks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "packworks-Prefix.pch"; sourceTree = "<group>"; };
+		C0B802DD148FA8CF00D60426 /* packworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packworks.h; sourceTree = "<group>"; };
+		C0B802E3148FAAE900D60426 /* shitbuilder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = shitbuilder; path = rpkg; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B802FF1490ED6000D60426 /* logo_bk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_bk.png; path = "Shared resources/logo_bk.png"; sourceTree = "<group>"; };
+		C0C80A4B148229A3008D90A1 /* packme */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = packme; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C80A4F148229A3008D90A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../../Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C0C80A52148229A3008D90A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0C80A55148229A3008D90A1 /* packme-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "packme-Prefix.pch"; sourceTree = "<group>"; };
+		C0C80A6114822A95008D90A1 /* EBPackageTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBPackageTemplates.h; path = packme/src/EBPackageTemplates.h; sourceTree = "<group>"; };
+		C0C80A6214822A95008D90A1 /* EBPackageTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBPackageTemplates.m; path = packme/src/EBPackageTemplates.m; sourceTree = "<group>"; };
+		C0C80A6414822C3E008D90A1 /* EBPackageTemplates_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBPackageTemplates_defines.h; path = packme/src/EBPackageTemplates_defines.h; sourceTree = "<group>"; };
+		C0C80A6B14826444008D90A1 /* EBPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBPackage.h; path = src/EBPackage.h; sourceTree = "<group>"; };
+		C0C80A6C14826444008D90A1 /* EBPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBPackage.m; path = src/EBPackage.m; sourceTree = "<group>"; };
+		C0C80A6E1482647C008D90A1 /* EBPackageBuilderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBPackageBuilderItem.h; path = src/EBPackageBuilderItem.h; sourceTree = "<group>"; };
+		C0C80A6F1482647C008D90A1 /* EBPackageBuilderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBPackageBuilderItem.m; path = src/EBPackageBuilderItem.m; sourceTree = "<group>"; };
+		C0C80A7314828034008D90A1 /* EBTerminalCommander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBTerminalCommander.h; path = src/EBTerminalCommander.h; sourceTree = "<group>"; };
+		C0C80A7414828034008D90A1 /* EBTerminalCommander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBTerminalCommander.m; path = src/EBTerminalCommander.m; sourceTree = "<group>"; };
+		C0C80A7614828064008D90A1 /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = ../../../../../../Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
+		C0C80A7814828447008D90A1 /* EBPackageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBPackageBuilder.h; path = src/EBPackageBuilder.h; sourceTree = "<group>"; };
+		C0C80A7914828447008D90A1 /* EBPackageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBPackageBuilder.m; path = src/EBPackageBuilder.m; sourceTree = "<group>"; };
+		C0C80A7B14833223008D90A1 /* shared_enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared_enums.h; path = src/shared_enums.h; sourceTree = "<group>"; };
+		C0C80A7E14833876008D90A1 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utils.h"; path = "src/NSString+Utils.h"; sourceTree = "<group>"; };
+		C0C80A7F14833876008D90A1 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "src/NSString+Utils.m"; sourceTree = "<group>"; };
+		C0C80A9E1483BF47008D90A1 /* NSArray+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Mapping.h"; path = "src/NSArray+Mapping.h"; sourceTree = "<group>"; };
+		C0C80A9F1483BF47008D90A1 /* NSArray+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Mapping.m"; path = "src/NSArray+Mapping.m"; sourceTree = "<group>"; };
+		C0C80AA21483C8EE008D90A1 /* EBKextPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBKextPackage.h; path = "src/Kexts additions/EBKextPackage.h"; sourceTree = "<group>"; };
+		C0C80AA31483C8EE008D90A1 /* EBKextPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBKextPackage.m; path = "src/Kexts additions/EBKextPackage.m"; sourceTree = "<group>"; };
+		C0C80AA51483D6F7008D90A1 /* Kexts_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kexts_defines.h; path = "src/Kexts additions/Kexts_defines.h"; sourceTree = "<group>"; };
+		C0C80AA61483DC15008D90A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = ../../../../../../Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C0C80AA81483DCBD008D90A1 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = ../../../../../../Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		C0C80AB21484981F008D90A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		C0C80AB51484981F008D90A1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C0C80AB61484981F008D90A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C0C80AB71484981F008D90A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C0C80ACA1485128B008D90A1 /* packmeUnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packmeUnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C80ACF1485128F008D90A1 /* packmeUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "packmeUnitTest-Info.plist"; sourceTree = "<group>"; };
+		C0C80AD11485128F008D90A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C0C80AD51485128F008D90A1 /* packmeUnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "packmeUnitTest-Prefix.pch"; sourceTree = "<group>"; };
+		C0C80AD71485128F008D90A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C0C80AE8148513EC008D90A1 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitTestMain.m; path = src/GHUnitTestMain.m; sourceTree = "<group>"; };
+		C0ECD4A8148A687A00251346 /* EBPackageBuilderLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBPackageBuilderLocale.h; path = src/EBPackageBuilderLocale.h; sourceTree = "<group>"; };
+		C0ECD4A9148A687A00251346 /* EBPackageBuilderLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBPackageBuilderLocale.m; path = src/EBPackageBuilderLocale.m; sourceTree = "<group>"; };
+		C0ECD4AD148A79E800251346 /* EBPackmeUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EBPackmeUnitTest.m; path = src/EBPackmeUnitTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0B802A5148FA70A00D60426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B802AA148FA70A00D60426 /* Cocoa.framework in Frameworks */,
+				C0B802C5148FA75B00D60426 /* CoreServices.framework in Frameworks */,
+				C0B802C6148FA75B00D60426 /* Security.framework in Frameworks */,
+				C0B802C7148FA75B00D60426 /* SecurityFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B802E0148FAAE900D60426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B802E5148FAAE900D60426 /* Foundation.framework in Frameworks */,
+				C0B802F2148FAB1600D60426 /* packworks.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C80A48148229A3008D90A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C80AA91483DCBE008D90A1 /* CoreServices.framework in Frameworks */,
+				C0C80AA71483DC15008D90A1 /* Security.framework in Frameworks */,
+				C0C80A7714828065008D90A1 /* SecurityFoundation.framework in Frameworks */,
+				C0C80A50148229A3008D90A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C80AC71485128B008D90A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C80ACC1485128C008D90A1 /* Cocoa.framework in Frameworks */,
+				C0ECD4BF148A930C00251346 /* CoreServices.framework in Frameworks */,
+				C0ECD4C0148A930C00251346 /* Security.framework in Frameworks */,
+				C0ECD4C1148A930C00251346 /* SecurityFoundation.framework in Frameworks */,
+				C089E770148F220800B30899 /* GHUnit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C089E722148CF72100B30899 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */,
+				C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */,
+				C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */,
+				C089E736148DBB9300B30899 /* Empty.strings */,
+				C0107BEA1493C052000962A7 /* Postinstall_Net_SLE.sh */,
+				C0107BEB1493C06E000962A7 /* Postinstall_Net_Extra.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		C089E772148F226100B30899 /* -- -- -- -- -- -- -- -- */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "-- -- -- -- -- -- -- --";
+			sourceTree = "<group>";
+		};
+		C0B80260148F241E00D60426 /* -- -- -- -- -- -- -- -- */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "-- -- -- -- -- -- -- --";
+			sourceTree = "<group>";
+		};
+		C0B80261148F242400D60426 /* -- -- -- -- -- -- -- -- */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "-- -- -- -- -- -- -- --";
+			sourceTree = "<group>";
+		};
+		C0B802AB148FA70A00D60426 /* packworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0B802DD148FA8CF00D60426 /* packworks.h */,
+				C0B802AC148FA70A00D60426 /* Supporting Files */,
+			);
+			path = packworks;
+			sourceTree = "<group>";
+		};
+		C0B802AC148FA70A00D60426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0B802AD148FA70A00D60426 /* packworks-Info.plist */,
+				C0B802AE148FA70B00D60426 /* InfoPlist.strings */,
+				C0B802B1148FA70B00D60426 /* packworks-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0B802E6148FAAE900D60426 /* shitbuilder */ = {
+			isa = PBXGroup;
+			children = (
+				C0107BF21493E8B4000962A7 /* main.m */,
+				C0B802E9148FAAE900D60426 /* Supporting Files */,
+			);
+			path = shitbuilder;
+			sourceTree = "<group>";
+		};
+		C0B802E9148FAAE900D60426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0107BF31493E8B4000962A7 /* rpkg-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0B802F3148FAB4100D60426 /* -- -- -- -- -- -- -- -- */ = {
+			isa = PBXGroup;
+			children = (
+				C0B802FF1490ED6000D60426 /* logo_bk.png */,
+			);
+			name = "-- -- -- -- -- -- -- --";
+			sourceTree = "<group>";
+		};
+		C0C80A40148229A2008D90A1 = {
+			isa = PBXGroup;
+			children = (
+				C0C80A4E148229A3008D90A1 /* Frameworks */,
+				C0C80A51148229A3008D90A1 /* packme */,
+				C089E772148F226100B30899 /* -- -- -- -- -- -- -- -- */,
+				C0C80ACD1485128C008D90A1 /* packmeUnitTest */,
+				C0B80260148F241E00D60426 /* -- -- -- -- -- -- -- -- */,
+				C0B802AB148FA70A00D60426 /* packworks */,
+				C0B80261148F242400D60426 /* -- -- -- -- -- -- -- -- */,
+				C0B802E6148FAAE900D60426 /* shitbuilder */,
+				C0B802F3148FAB4100D60426 /* -- -- -- -- -- -- -- -- */,
+				C0C80A4C148229A3008D90A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0C80A4C148229A3008D90A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A4B148229A3008D90A1 /* packme */,
+				C0C80ACA1485128B008D90A1 /* packmeUnitTest.app */,
+				C0B802A9148FA70A00D60426 /* packworks.framework */,
+				C0B802E3148FAAE900D60426 /* shitbuilder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0C80A4E148229A3008D90A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C089E76F148F220800B30899 /* GHUnit.framework */,
+				C0C80AA81483DCBD008D90A1 /* CoreServices.framework */,
+				C0C80AA61483DC15008D90A1 /* Security.framework */,
+				C0C80A7614828064008D90A1 /* SecurityFoundation.framework */,
+				C0C80A4F148229A3008D90A1 /* Foundation.framework */,
+				C0C80AB21484981F008D90A1 /* Cocoa.framework */,
+				C0C80AB41484981F008D90A1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0C80A51148229A3008D90A1 /* packme */ = {
+			isa = PBXGroup;
+			children = (
+				C089E73D148F088F00B30899 /* TODO.md */,
+				C0C80A71148264A5008D90A1 /* EBPackageMaker */,
+				C0C80AA11483C8B7008D90A1 /* Kexts addition */,
+				C0C80A691482640E008D90A1 /* EBPackage+EBPackageMakerItem */,
+				C0C80A5D148229EC008D90A1 /* EBPackageTemplates */,
+				C0C80A7214827FDB008D90A1 /* cmd launcher */,
+				C0C80A7D14833850008D90A1 /* Categories */,
+				C0C80A54148229A3008D90A1 /* Supporting Files */,
+			);
+			path = packme;
+			sourceTree = "<group>";
+		};
+		C0C80A54148229A3008D90A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A52148229A3008D90A1 /* main.m */,
+				C0C80A55148229A3008D90A1 /* packme-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0C80A5D148229EC008D90A1 /* EBPackageTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A6114822A95008D90A1 /* EBPackageTemplates.h */,
+				C0C80A6214822A95008D90A1 /* EBPackageTemplates.m */,
+				C0C80A6414822C3E008D90A1 /* EBPackageTemplates_defines.h */,
+			);
+			name = EBPackageTemplates;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C0C80A691482640E008D90A1 /* EBPackage+EBPackageMakerItem */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A6B14826444008D90A1 /* EBPackage.h */,
+				C0C80A6C14826444008D90A1 /* EBPackage.m */,
+				C0C80A6E1482647C008D90A1 /* EBPackageBuilderItem.h */,
+				C0C80A6F1482647C008D90A1 /* EBPackageBuilderItem.m */,
+			);
+			name = "EBPackage+EBPackageMakerItem";
+			sourceTree = "<group>";
+		};
+		C0C80A71148264A5008D90A1 /* EBPackageMaker */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A7814828447008D90A1 /* EBPackageBuilder.h */,
+				C0C80A7914828447008D90A1 /* EBPackageBuilder.m */,
+				C0ECD4A8148A687A00251346 /* EBPackageBuilderLocale.h */,
+				C0ECD4A9148A687A00251346 /* EBPackageBuilderLocale.m */,
+				C0C80A7B14833223008D90A1 /* shared_enums.h */,
+			);
+			name = EBPackageMaker;
+			sourceTree = "<group>";
+		};
+		C0C80A7214827FDB008D90A1 /* cmd launcher */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A7314828034008D90A1 /* EBTerminalCommander.h */,
+				C0C80A7414828034008D90A1 /* EBTerminalCommander.m */,
+			);
+			name = "cmd launcher";
+			sourceTree = "<group>";
+		};
+		C0C80A7D14833850008D90A1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80A7E14833876008D90A1 /* NSString+Utils.h */,
+				C0C80A7F14833876008D90A1 /* NSString+Utils.m */,
+				C0C80A9E1483BF47008D90A1 /* NSArray+Mapping.h */,
+				C0C80A9F1483BF47008D90A1 /* NSArray+Mapping.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		C0C80AA11483C8B7008D90A1 /* Kexts addition */ = {
+			isa = PBXGroup;
+			children = (
+				C089E729148D029400B30899 /* EBKextPackageBuilder.h */,
+				C089E72A148D029400B30899 /* EBKextPackageBuilder.m */,
+				C0C80AA21483C8EE008D90A1 /* EBKextPackage.h */,
+				C0C80AA31483C8EE008D90A1 /* EBKextPackage.m */,
+				C0C80AA51483D6F7008D90A1 /* Kexts_defines.h */,
+				C089E722148CF72100B30899 /* Scripts */,
+			);
+			name = "Kexts addition";
+			sourceTree = "<group>";
+		};
+		C0C80AB41484981F008D90A1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80AB51484981F008D90A1 /* AppKit.framework */,
+				C0C80AB61484981F008D90A1 /* CoreData.framework */,
+				C0C80AB71484981F008D90A1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C0C80ACD1485128C008D90A1 /* packmeUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80AEA14851483008D90A1 /* Unit Tests */,
+				C0C80ACE1485128F008D90A1 /* Supporting Files */,
+			);
+			path = packmeUnitTest;
+			sourceTree = "<group>";
+		};
+		C0C80ACE1485128F008D90A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0C80AE8148513EC008D90A1 /* GHUnitTestMain.m */,
+				C0C80ACF1485128F008D90A1 /* packmeUnitTest-Info.plist */,
+				C0C80AD01485128F008D90A1 /* InfoPlist.strings */,
+				C0C80AD51485128F008D90A1 /* packmeUnitTest-Prefix.pch */,
+				C0C80AD61485128F008D90A1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0C80AEA14851483008D90A1 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C0ECD4AD148A79E800251346 /* EBPackmeUnitTest.m */,
+			);
+			name = "Unit Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C0B802A6148FA70A00D60426 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B802C8148FA78D00D60426 /* EBPackageBuilder.h in Headers */,
+				C0B802C9148FA78D00D60426 /* EBPackageBuilderLocale.h in Headers */,
+				C0B802CA148FA78D00D60426 /* shared_enums.h in Headers */,
+				C0B802CB148FA78D00D60426 /* EBKextPackageBuilder.h in Headers */,
+				C0B802CC148FA78D00D60426 /* EBKextPackage.h in Headers */,
+				C0B802CE148FA78D00D60426 /* EBPackage.h in Headers */,
+				C0B802CF148FA78D00D60426 /* EBPackageBuilderItem.h in Headers */,
+				C0B802CD148FA78D00D60426 /* Kexts_defines.h in Headers */,
+				C0B802D0148FA78D00D60426 /* EBPackageTemplates.h in Headers */,
+				C0B802D1148FA78D00D60426 /* EBPackageTemplates_defines.h in Headers */,
+				C0B802D2148FA78D00D60426 /* EBTerminalCommander.h in Headers */,
+				C0B802D3148FA78D00D60426 /* NSString+Utils.h in Headers */,
+				C0B802D4148FA78D00D60426 /* NSArray+Mapping.h in Headers */,
+				C0B802DE148FA8CF00D60426 /* packworks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C0B802A8148FA70A00D60426 /* packworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B802B2148FA70B00D60426 /* Build configuration list for PBXNativeTarget "packworks" */;
+			buildPhases = (
+				C0B802A4148FA70A00D60426 /* Sources */,
+				C0B802A5148FA70A00D60426 /* Frameworks */,
+				C0B802A6148FA70A00D60426 /* Headers */,
+				C0B802A7148FA70A00D60426 /* Resources */,
+				C0B803051490F87900D60426 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = packworks;
+			productName = packworks;
+			productReference = C0B802A9148FA70A00D60426 /* packworks.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0B802E2148FAAE900D60426 /* rpkg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B802ED148FAAE900D60426 /* Build configuration list for PBXNativeTarget "rpkg" */;
+			buildPhases = (
+				C0B802DF148FAAE900D60426 /* Sources */,
+				C0B802E0148FAAE900D60426 /* Frameworks */,
+				C0B802F4148FBCC400D60426 /* CopyFiles */,
+				C0B803021490ED8A00D60426 /* CopyFiles */,
+				C0B803041490F74400D60426 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0B802F9148FBEDC00D60426 /* PBXTargetDependency */,
+			);
+			name = rpkg;
+			productName = shitbuilder;
+			productReference = C0B802E3148FAAE900D60426 /* shitbuilder */;
+			productType = "com.apple.product-type.tool";
+		};
+		C0C80A4A148229A3008D90A1 /* packme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0C80A5A148229A3008D90A1 /* Build configuration list for PBXNativeTarget "packme" */;
+			buildPhases = (
+				C0C80A47148229A3008D90A1 /* Sources */,
+				C0C80A48148229A3008D90A1 /* Frameworks */,
+				C0C80A49148229A3008D90A1 /* CopyFiles */,
+				C089E724148CF7DD00B30899 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = packme;
+			productName = packme;
+			productReference = C0C80A4B148229A3008D90A1 /* packme */;
+			productType = "com.apple.product-type.tool";
+		};
+		C0C80AC91485128B008D90A1 /* packmeUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0C80ADF14851290008D90A1 /* Build configuration list for PBXNativeTarget "packmeUnitTest" */;
+			buildPhases = (
+				C0C80AC61485128B008D90A1 /* Sources */,
+				C0C80AC71485128B008D90A1 /* Frameworks */,
+				C0C80AC81485128B008D90A1 /* Resources */,
+				C0C80AE41485132F008D90A1 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = packmeUnitTest;
+			productName = packmeUnitTest;
+			productReference = C0C80ACA1485128B008D90A1 /* packmeUnitTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0C80A42148229A2008D90A1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C0C80A45148229A2008D90A1 /* Build configuration list for PBXProject "packme" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C0C80A40148229A2008D90A1;
+			productRefGroup = C0C80A4C148229A3008D90A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0C80A4A148229A3008D90A1 /* packme */,
+				C0C80AC91485128B008D90A1 /* packmeUnitTest */,
+				C0B802A8148FA70A00D60426 /* packworks */,
+				C0B802E2148FAAE900D60426 /* rpkg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0B802A7148FA70A00D60426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0107BEC1493C096000962A7 /* Postinstall_Extra_EFI_.sh in Resources */,
+				C0107BED1493C096000962A7 /* Postinstall_SLE_.sh in Resources */,
+				C0107BEE1493C096000962A7 /* Preinstall_Net_Extra.sh in Resources */,
+				C0107BEF1493C096000962A7 /* Empty.strings in Resources */,
+				C0107BF01493C096000962A7 /* Postinstall_Net_SLE.sh in Resources */,
+				C0107BF11493C096000962A7 /* Postinstall_Net_Extra.sh in Resources */,
+				C0B802B0148FA70B00D60426 /* InfoPlist.strings in Resources */,
+				C0B803011490ED6100D60426 /* logo_bk.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C80AC81485128B008D90A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C089E739148E5E2A00B30899 /* Postinstall_Extra_EFI_.sh in Resources */,
+				C089E73C148E5E2A00B30899 /* Preinstall_Net_Extra.sh in Resources */,
+				C089E738148DBC0900B30899 /* Empty.strings in Resources */,
+				C089E73A148E5E2A00B30899 /* Postinstall_SLE_.sh in Resources */,
+				C0C80AD21485128F008D90A1 /* InfoPlist.strings in Resources */,
+				C0C80AD81485128F008D90A1 /* Credits.rtf in Resources */,
+				C0B803001490ED6000D60426 /* logo_bk.png in Resources */,
+				C0B803071492513500D60426 /* (null) in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C0B803041490F74400D60426 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -a ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME} ~/Desktop/rpkg/Contents/MacOS/";
+			showEnvVarsInLog = 0;
+		};
+		C0B803051490F87900D60426 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -R ~/Desktop/rpkg/Contents/Frameworks/${FULL_PRODUCT_NAME}\ncp -a ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME} ~/Desktop/rpkg/Contents/Frameworks/";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0B802A4148FA70A00D60426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B802B5148FA72B00D60426 /* EBPackageBuilder.m in Sources */,
+				C0B802B6148FA72B00D60426 /* EBPackageBuilderLocale.m in Sources */,
+				C0B802B7148FA72B00D60426 /* EBKextPackageBuilder.m in Sources */,
+				C0B802B8148FA72B00D60426 /* EBKextPackage.m in Sources */,
+				C0B802B9148FA72B00D60426 /* EBPackage.m in Sources */,
+				C0B802BA148FA72B00D60426 /* EBPackageBuilderItem.m in Sources */,
+				C0B802BB148FA72B00D60426 /* EBPackageTemplates.m in Sources */,
+				C0B802BC148FA72B00D60426 /* EBTerminalCommander.m in Sources */,
+				C0B802BD148FA72B00D60426 /* NSString+Utils.m in Sources */,
+				C0B802BE148FA72B00D60426 /* NSArray+Mapping.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B802DF148FAAE900D60426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0107BF41493E8B4000962A7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C80A47148229A3008D90A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C80A53148229A3008D90A1 /* main.m in Sources */,
+				C0C80A6314822A95008D90A1 /* EBPackageTemplates.m in Sources */,
+				C0C80A6D14826444008D90A1 /* EBPackage.m in Sources */,
+				C0C80A701482647C008D90A1 /* EBPackageBuilderItem.m in Sources */,
+				C0C80A7514828034008D90A1 /* EBTerminalCommander.m in Sources */,
+				C0C80A7A14828447008D90A1 /* EBPackageBuilder.m in Sources */,
+				C0C80A8014833876008D90A1 /* NSString+Utils.m in Sources */,
+				C0C80AA01483BF48008D90A1 /* NSArray+Mapping.m in Sources */,
+				C0C80AA41483C8EE008D90A1 /* EBKextPackage.m in Sources */,
+				C0ECD4AA148A687A00251346 /* EBPackageBuilderLocale.m in Sources */,
+				C089E72B148D029400B30899 /* EBKextPackageBuilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C80AC61485128B008D90A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C089E72C148D1AE100B30899 /* EBKextPackageBuilder.h in Sources */,
+				C089E72D148D1AE100B30899 /* EBKextPackageBuilder.m in Sources */,
+				C0C80AE9148513EC008D90A1 /* GHUnitTestMain.m in Sources */,
+				C0ECD4AF148A7A9700251346 /* EBPackmeUnitTest.m in Sources */,
+				C0ECD4B0148A92D600251346 /* EBPackageBuilder.m in Sources */,
+				C0ECD4B1148A92D600251346 /* EBPackageBuilderLocale.m in Sources */,
+				C0ECD4B2148A92D600251346 /* EBKextPackage.m in Sources */,
+				C0ECD4B3148A92D600251346 /* EBPackage.m in Sources */,
+				C0ECD4B4148A92D600251346 /* EBPackageBuilderItem.m in Sources */,
+				C0ECD4B5148A92D600251346 /* EBPackageTemplates.m in Sources */,
+				C0ECD4B6148A92D600251346 /* EBTerminalCommander.m in Sources */,
+				C0ECD4B7148A92D600251346 /* NSString+Utils.m in Sources */,
+				C0ECD4B8148A92D600251346 /* NSArray+Mapping.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0B802F9148FBEDC00D60426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B802A8148FA70A00D60426 /* packworks */;
+			targetProxy = C0B802F8148FBEDC00D60426 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0B802AE148FA70B00D60426 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0B802AF148FA70B00D60426 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C0C80AD01485128F008D90A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0C80AD11485128F008D90A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C0C80AD61485128F008D90A1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0C80AD71485128F008D90A1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0B802B3148FA70B00D60426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "packworks/packworks-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = __TARGET_FRAMEWORK__;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "DEBUG=1";
+				INFOPLIST_FILE = "packworks/packworks-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = packworks;
+				WARNING_CFLAGS = "";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		C0B802B4148FA70B00D60426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "packworks/packworks-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = __TARGET_FRAMEWORK__;
+				INFOPLIST_FILE = "packworks/packworks-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = packworks;
+				WARNING_CFLAGS = "";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		C0B802EE148FAAE900D60426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rpkg/rpkg-Prefix.pch";
+				PRODUCT_NAME = rpkg;
+			};
+			name = Debug;
+		};
+		C0B802EF148FAAE900D60426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rpkg/rpkg-Prefix.pch";
+				PRODUCT_NAME = rpkg;
+			};
+			name = Release;
+		};
+		C0C80A58148229A3008D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C0C80A59148229A3008D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C0C80A5B148229A3008D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/packmeUnitTest\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "packme/packme-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C0C80A5C148229A3008D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/packmeUnitTest\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "packme/packme-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C0C80AE014851290008D90A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/packmeUnitTest\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "packmeUnitTest/packmeUnitTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "packmeUnitTest/packmeUnitTest-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C0C80AE114851290008D90A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/packmeUnitTest\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "packmeUnitTest/packmeUnitTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "packmeUnitTest/packmeUnitTest-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0B802B2148FA70B00D60426 /* Build configuration list for PBXNativeTarget "packworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B802B3148FA70B00D60426 /* Debug */,
+				C0B802B4148FA70B00D60426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B802ED148FAAE900D60426 /* Build configuration list for PBXNativeTarget "rpkg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B802EE148FAAE900D60426 /* Debug */,
+				C0B802EF148FAAE900D60426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0C80A45148229A2008D90A1 /* Build configuration list for PBXProject "packme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0C80A58148229A3008D90A1 /* Debug */,
+				C0C80A59148229A3008D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0C80A5A148229A3008D90A1 /* Build configuration list for PBXNativeTarget "packme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0C80A5B148229A3008D90A1 /* Debug */,
+				C0C80A5C148229A3008D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0C80ADF14851290008D90A1 /* Build configuration list for PBXNativeTarget "packmeUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0C80AE014851290008D90A1 /* Debug */,
+				C0C80AE114851290008D90A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0C80A42148229A2008D90A1 /* Project object */;
+}
