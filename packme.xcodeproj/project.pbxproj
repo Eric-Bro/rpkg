@@ -165,7 +165,7 @@
 		C0107BEB1493C06E000962A7 /* Postinstall_Net_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Net_Extra.sh; path = "src/Kexts additions/Scripts/Postinstall_Net_Extra.sh"; sourceTree = "<group>"; };
 		C0107BF21493E8B4000962A7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rpkg/main.m; sourceTree = SOURCE_ROOT; };
 		C0107BF31493E8B4000962A7 /* rpkg-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "rpkg-Prefix.pch"; path = "rpkg/rpkg-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		C071D8DB1493EBA600242323 /* Readme.md */ = {isa = PBXFileReference; name = Readme.md; path = ../Readme.md; sourceTree = "<group>"; };
+		C071D8DB1493EBA600242323 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = Readme.md; path = ../Readme.md; sourceTree = "<group>"; };
 		C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Extra_EFI_.sh; path = "src/Kexts additions/Scripts/Postinstall_Extra_EFI_.sh"; sourceTree = "<group>"; };
 		C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_SLE_.sh; path = "src/Kexts additions/Scripts/Postinstall_SLE_.sh"; sourceTree = "<group>"; };
 		C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Preinstall_Net_Extra.sh; path = "src/Kexts additions/Scripts/Preinstall_Net_Extra.sh"; sourceTree = "<group>"; };

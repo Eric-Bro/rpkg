@@ -1,5 +1,5 @@
 ##What's app?
-The `rpkg` is a little command-line utility which allows you to create  Mac OS X Installation packages for some .kexts files (with all needen scripts, kernel-cache-working and so on).
+The `rpkg` is a little command-line utility which allows you to create  Mac OS X Installation packages for some .kexts files (with all needed scripts, kernel-cache-working and so on).
 In fact, this app has been created as a part of Rox project, but it can be used separately as well.
 
 ## What is rpkg based on?

@@ -12,11 +12,12 @@
 #import "NSString+Utils.h"
 
 #define APPNAME @"rpkg"
-#define APPVERSION @"0xd023"
-#define VERSIONCOMMENT @"(without PackageBuilder included)"
+#define APPVERSION @"0xd024"
+#define VERSIONCOMMENT @""
 #define COPYRIGTHS @"TrigenSoftware, 2011 eric.broska@me.com"
 
 void QLog(NSString *format, ...);
+void InfoPrint();
 
 static struct option longopts[] = {
         {"lru",     required_argument, NULL,  'r'},
@@ -25,7 +26,8 @@ static struct option longopts[] = {
         {"output",  required_argument, NULL,  'o'},
         {"pkgname", required_argument, NULL,  'n'},
         {"pkgtype", required_argument, NULL,  't'},
-        {"builder", required_argument, NULL,  'b'} ,
+        {"builder", required_argument, NULL,  'b'},
+        {"help"   , no_argument,       NULL,  'h'},
         {NULL,      0,                 NULL,    0}
 };
 
@@ -40,7 +42,7 @@ int main (int argc, char * argv[])
     NSString *output_path = nil, *package_name = nil, *maker_path = nil, *ru_readme = nil, *en_readme = nil;
     int package_type = 0;
     int sources_flag = 0, type_flag = 0, utility_flag = 0;
-    const char *optstring = "r:e:s:o:n:t:b:";
+    const char *optstring = "r:e:s:o:n:t:b:h";
     int tmp; 
     while ((tmp = getopt_long(argc, argv, optstring, longopts, NULL)) != -1) {
         switch (tmp) {
@@ -68,46 +70,40 @@ int main (int argc, char * argv[])
                 maker_path = [[NSString stringWithCString: optarg encoding: NSUTF8StringEncoding] stringByExpandingTildeInPath];
                 utility_flag++;
                 break;
-            default:
-                /* TODO: print how-to-use-it info */
-                QLog(@"usage: rpkg [arg][value] ...");
-                QLog(@"Arguments [required]:");
-                QLog(@"   -s (--source)  : a .kext file which will be added to the package;");
-                QLog(@"   -o (--output)  : an output .pkg full filename;");
-                QLog(@"   -t (--pkgtype) : a type of the package");
-                QLog(@"                    (1=General kexts, 2=Ethernet kexts, 3=Wireless kexts);");
-                QLog(@"Arguments [optional]:");
-                QLog(@"   -n (--pkgname) : a name of the package;");
-                QLog(@"   -r (--lru)     : a Russian ReadMe file;");
-                QLog(@"   -e (--len)     : an English ReadMe file;");
-                QLog(@"   -b (--builder) : a path to the Apple's PackageMaker utility;");
-                QLog(@"\nwith love, \n%@\n", APPNAME);
+            case 'h':
+                InfoPrint();
                 [sources release];
                 [pool drain];
-                return 0;            
+                return 0;
+            default:
+                break;
         }
     }
     /* Error handling part */
     if (!sources_flag) {
-        QLog(@"FATAL: Its nothing to do with (you forgot to set some source item). Try again.");
+        QLog(@"FATAL: Its nothing to do with (you forgot to set some source item). Try again.\n--- --- --- ---");
+        InfoPrint();
         [sources release];
         [pool drain];
         return -1;
     }
     if (!output_path) {
-        QLog(@"FATAL: You forgot to set an output filename for the package. Try again.");
+        QLog(@"FATAL: You forgot to set an output filename for the package. Try again.\n--- --- --- ---");
+        InfoPrint();
         [sources release];
         [pool drain];
         return -1;
     }
     if (!type_flag || (package_type != kGeneralKextType && package_type != kEthernetKextType && package_type != kWirelessKextType)) {
-        QLog(@"FATAL: You forgot to set a type of the package. Try again.");
+        QLog(@"FATAL: You forgot to set a type of the package. Try again.\n--- --- --- ---");
+        InfoPrint(); 
         [sources release];
         [pool drain];
         return -1;
     }
     if (utility_flag && ! [[NSFileManager defaultManager] fileExistsAtPath: maker_path]) {
-        QLog(@"FATAL: The PackageMaker utility doesn't exists at the path you set. Try again and be careful.");
+        QLog(@"FATAL: The PackageMaker utility doesn't exists at the path you set. Try again and be careful.\n--- --- --- ---");
+        InfoPrint();
         [sources release];
         [pool drain];
         return -1;
@@ -180,4 +176,20 @@ void QLog(NSString *format, ...)
     va_end(args);
     printf("%s\n", [tmp UTF8String]);
     [tmp release];
+}
+
+void InfoPrint()
+{
+    QLog(@"usage: rpkg [arg][value] ...");
+    QLog(@"Arguments [required]:");
+    QLog(@"   -s (--source)  : a .kext file which will be added to the package;");
+    QLog(@"   -o (--output)  : an output .pkg full filename;");
+    QLog(@"   -t (--pkgtype) : a type of the package");
+    QLog(@"                    (1=General kexts, 2=Ethernet kexts, 3=Wireless kexts);");
+    QLog(@"Arguments [optional]:");
+    QLog(@"   -n (--pkgname) : a name of the package;");
+    QLog(@"   -r (--lru)     : a Russian ReadMe file;");
+    QLog(@"   -e (--len)     : an English ReadMe file;");
+    QLog(@"   -b (--builder) : a path to the Apple's PackageMaker utility;");
+    QLog(@"\nwith love, \n%@\n", APPNAME);
 }
