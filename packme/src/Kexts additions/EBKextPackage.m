@@ -47,6 +47,7 @@
 {
     if ( ! ([[NSFileManager defaultManager] fileExistsAtPath: bundle] 
             && [bundle hasSuffix: kEBKextBundleExtension])) {
+        
         return (self = nil, self);
     }
     
@@ -82,7 +83,9 @@
         if (autogen) {
             [self generateScripts];
         }
-    } else self = nil;
+    } else {
+        self = nil;
+    }
     
     return self;
 }

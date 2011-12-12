@@ -12,7 +12,7 @@
 #import "NSString+Utils.h"
 
 #define APPNAME @"rpkg"
-#define APPVERSION @"0xd024"
+#define APPVERSION @"0xd025"
 #define VERSIONCOMMENT @""
 #define COPYRIGTHS @"TrigenSoftware, 2011 eric.broska@me.com"
 
@@ -28,6 +28,7 @@ static struct option longopts[] = {
         {"pkgtype", required_argument, NULL,  't'},
         {"builder", required_argument, NULL,  'b'},
         {"help"   , no_argument,       NULL,  'h'},
+        {"disable", required_argument, NULL,  'c'},
         {NULL,      0,                 NULL,    0}
 };
 
@@ -40,9 +41,9 @@ int main (int argc, char * argv[])
     
     NSMutableArray *sources = [[NSMutableArray alloc] init];
     NSString *output_path = nil, *package_name = nil, *maker_path = nil, *ru_readme = nil, *en_readme = nil;
-    int package_type = 0;
-    int sources_flag = 0, type_flag = 0, utility_flag = 0;
-    const char *optstring = "r:e:s:o:n:t:b:h";
+    NSString *disable_choise = nil, *tmp_type_string = nil;
+    int package_type = 0, sources_flag = 0, type_flag = 0, utility_flag = 0;
+    const char *optstring = "r:e:s:o:n:t:b:hc:";
     int tmp; 
     while ((tmp = getopt_long(argc, argv, optstring, longopts, NULL)) != -1) {
         switch (tmp) {
@@ -62,9 +63,21 @@ int main (int argc, char * argv[])
             case 'n':
                 package_name = [NSString stringWithCString: optarg encoding: NSUTF8StringEncoding];
                 break;
+            case 'c':
+                disable_choise = [[NSString stringWithCString: optarg encoding: NSUTF8StringEncoding] lowercaseString];
+                if (![disable_choise isEqualToString: @"extra"] && ![disable_choise isEqualToString:@"sle"]) {
+                    disable_choise = nil;
+                }
+                break;
             case 't':
-                package_type = [[NSString stringWithCString: optarg encoding: NSUTF8StringEncoding] intValue];
-                type_flag++;
+                tmp_type_string = [NSString stringWithCString: optarg encoding: NSUTF8StringEncoding];
+                if ([tmp_type_string isEqualToString: @"general"])  package_type = kGeneralKextType;
+                if ([tmp_type_string isEqualToString: @"ethernet"]) package_type = kEthernetKextType;
+                if ([tmp_type_string isEqualToString: @"wireless"]) package_type = kWirelessKextType;
+                if (package_type) {
+                    type_flag++;
+                }
+                NSLog(@"%@ = %i", tmp_type_string, package_type);
                 break;
             case 'b':
                 maker_path = [[NSString stringWithCString: optarg encoding: NSUTF8StringEncoding] stringByExpandingTildeInPath];
@@ -112,20 +125,29 @@ int main (int argc, char * argv[])
     QLog(@"Composing...");
     /* Composing part */
     NSArray *kexts =  [NSArray arrayWithArray: [sources mappingUsingBlock:^id(NSString *path) {
+        NSLog(@"%@", path);
         EBKextPackage *kp = [[EBKextPackage alloc] initWithKextBundle: path 
                                                           identifier: [NSString stringWithFormat: @"org.shitbuilder.%@.pkg",
                                                                        [NSString randomFilenameWithLength: 5 andExtension: @""]]  
                                                          destination: kKextExtraFolderDestination 
                                                                 type: package_type 
                                                  autogenerateScripts: YES]; 
+        if (!kp) {
+            //[kp release];
+            return [NSNull null];
+        }
         [kp setTargetPath: kEBKextPackageDefaultTargetPath];
         [kp setShouldIncludeContainigFolder: YES];
         return [kp autorelease];
     }]];
     
+    
     EBKextPackageBuilder *builder = [[EBKextPackageBuilder alloc] initWithTitle: package_name ? package_name : @"Roxy extension package" 
                                                                        andKexts: kexts];
     [builder setBackgroundAlignMode: kEBLocaleAlignementBottomLeft];
+    if (disable_choise) {
+        [builder setDisabledChoiseName: disable_choise];
+    }
     /* By default adds only English localization... */
     EBPackageBuilderLocale *en_locale = [[EBPackageBuilderLocale alloc] initWithLanguage:@"en" andContent:@""];
     [en_locale setBackgroundFile:[[NSBundle mainBundle] pathForResource:@"logo_bk" ofType:@"png"]];
@@ -190,6 +212,8 @@ void InfoPrint()
     QLog(@"   -n (--pkgname) : a name of the package;");
     QLog(@"   -r (--lru)     : a Russian ReadMe file;");
     QLog(@"   -e (--len)     : an English ReadMe file;");
+    QLog(@"   -c (--disable) : disable one of two choises in a package");
+    QLog(@"                    ('extra' or 'sle');");
     QLog(@"   -b (--builder) : a path to the Apple's PackageMaker utility;");
     QLog(@"\nwith love, \n%@\n", APPNAME);
 }

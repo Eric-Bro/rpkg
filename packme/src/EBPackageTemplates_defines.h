@@ -6,7 +6,7 @@
 	#define EBPackageTemplates_defines_h
 
 #define cstring(x) [(x) cStringUsingEncoding: NSUTF8StringEncoding]
-#define flag(x,y) ((y) & (x)) == (x)
+#define flag(x,y) (((y) & (x)) == (x))
 
 /*!
  * index.xml
