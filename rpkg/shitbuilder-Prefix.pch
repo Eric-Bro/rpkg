@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'shitbuilder' target in the 'shitbuilder' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
