@@ -6,15 +6,18 @@
 
 #import <Foundation/Foundation.h>
 #import <getopt.h>
-#import "EBKextPackage.h"
+//#import "EBKextPackage.h"
 #import "packworks.h"
 #import "NSArray+Mapping.h"
 #import "NSString+Utils.h"
 
 #define APPNAME @"rpkg"
-#define APPVERSION @"0xd025"
+#define APPVERSION @"0xd026"
 #define VERSIONCOMMENT @""
 #define COPYRIGTHS @"TrigenSoftware, 2011 eric.broska@me.com"
+
+
+#define EBPackworksResource(x,y) [[NSBundle bundleWithIdentifier: @"org.eric-bro.packworks"] pathForResource: (x) ofType: (y)]
 
 void QLog(NSString *format, ...);
 void InfoPrint();
@@ -77,7 +80,6 @@ int main (int argc, char * argv[])
                 if (package_type) {
                     type_flag++;
                 }
-                NSLog(@"%@ = %i", tmp_type_string, package_type);
                 break;
             case 'b':
                 maker_path = [[NSString stringWithCString: optarg encoding: NSUTF8StringEncoding] stringByExpandingTildeInPath];
@@ -125,7 +127,6 @@ int main (int argc, char * argv[])
     QLog(@"Composing...");
     /* Composing part */
     NSArray *kexts =  [NSArray arrayWithArray: [sources mappingUsingBlock:^id(NSString *path) {
-        NSLog(@"%@", path);
         EBKextPackage *kp = [[EBKextPackage alloc] initWithKextBundle: path 
                                                           identifier: [NSString stringWithFormat: @"org.shitbuilder.%@.pkg",
                                                                        [NSString randomFilenameWithLength: 5 andExtension: @""]]  
@@ -148,21 +149,23 @@ int main (int argc, char * argv[])
     if (disable_choise) {
         [builder setDisabledChoiseName: disable_choise];
     }
-    /* By default adds only English localization... */
+    
     EBPackageBuilderLocale *en_locale = [[EBPackageBuilderLocale alloc] initWithLanguage:@"en" andContent:@""];
-    [en_locale setBackgroundFile:[[NSBundle mainBundle] pathForResource:@"logo_bk" ofType:@"png"]];
+    [en_locale setBackgroundFile: EBPackworksResource(@"logo_bk", @"png")];
     if (en_readme) {
         [en_locale addFileAtPath:en_readme withType:kEBLocaleReadmeFileType];
     }
+    [en_locale addFileAtPath: EBPackworksResource(@"License_eng", @"txt") withType: kEBLocaleLicenseFileType];
+
     [builder addLocale:en_locale];
     [en_locale release];
-    /* ...and Russian localization if exists so */
+    EBPackageBuilderLocale * ru_locale = [[EBPackageBuilderLocale alloc] initWithLanguage: @"ru" andContent: @""];
+    [ru_locale setBackgroundFile: EBPackworksResource(@"logo_bk", @"png")];
+    [ru_locale addFileAtPath: EBPackworksResource(@"License_ru", @"txt") withType: kEBLocaleLicenseFileType];
+    [builder addLocale: ru_locale];
+    [ru_locale release];
     if (ru_readme) {
-        EBPackageBuilderLocale * ru_locale = [[EBPackageBuilderLocale alloc] initWithLanguage: @"ru" andContent: @""];
-        [ru_locale setBackgroundFile: [[NSBundle mainBundle] pathForResource: @"logo_bk" ofType: @"png"]];
         [ru_locale addFileAtPath: ru_readme withType: kEBLocaleReadmeFileType];
-        [builder addLocale: ru_locale];
-        [ru_locale release];
     }
 
     [builder setOrganizationIdentifier: @"org.rox"];
@@ -204,16 +207,16 @@ void InfoPrint()
 {
     QLog(@"usage: rpkg [arg][value] ...");
     QLog(@"Arguments [required]:");
-    QLog(@"   -s (--source)  : a .kext file which will be added to the package;");
-    QLog(@"   -o (--output)  : an output .pkg full filename;");
-    QLog(@"   -t (--pkgtype) : a type of the package");
-    QLog(@"                    (1=General kexts, 2=Ethernet kexts, 3=Wireless kexts);");
+    QLog(@"     -s (--source)  : a .kext file which will be added to the package;");
+    QLog(@"     -o (--output)  : an output .pkg full filename;");
+    QLog(@"     -t (--pkgtype) : a type of the package");
+    QLog(@"                    ('general', 'ethernet', 'wireless');");
     QLog(@"Arguments [optional]:");
-    QLog(@"   -n (--pkgname) : a name of the package;");
-    QLog(@"   -r (--lru)     : a Russian ReadMe file;");
-    QLog(@"   -e (--len)     : an English ReadMe file;");
-    QLog(@"   -c (--disable) : disable one of two choises in a package");
+    QLog(@"     -n (--pkgname) : a name of the package;");
+    QLog(@"     -r (--lru)     : a Russian ReadMe file;");
+    QLog(@"     -e (--len)     : an English ReadMe file;");
+    QLog(@"     -c (--disable) : disable one of two choices in a package");
     QLog(@"                    ('extra' or 'sle');");
-    QLog(@"   -b (--builder) : a path to the Apple's PackageMaker utility;");
+    QLog(@"     -b (--builder) : a custom path to the Apple's PackageMaker utility;");
     QLog(@"\nwith love, \n%@\n", APPNAME);
 }

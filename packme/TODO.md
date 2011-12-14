@@ -1,4 +1,4 @@
-[packme 0xd024] ->->-> (11.12.11)
+[packme 0xd025] ->->-> (12.12.11)
 
 --1.  Generate a "mods" section in info files (use `packme_info_keys_mods` and update the template for this key);--
  2.  Add "Package Content Location" selector (and so on);

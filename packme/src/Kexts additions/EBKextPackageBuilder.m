@@ -8,9 +8,10 @@
 
 
 #define EBFastRandomID [NSString stringWithFormat: @"org.packme.%@.id", [NSString randomFilenameWithLength:4 andExtension: @""]]
+
 #ifdef __TARGET_FRAMEWORK__
 	#define EBFastResource(x,y) [[NSBundle bundleWithIdentifier: @"org.eric-bro.packworks"] pathForResource: (x) ofType: (y)]
-#else
+#else	
 	#define EBFastResource(x,y) [[NSBundle mainBundle] pathForResource: (x) ofType: (y)]
 #endif
 

@@ -14,9 +14,8 @@
 		C0107BF01493C096000962A7 /* Postinstall_Net_SLE.sh in Resources */ = {isa = PBXBuildFile; fileRef = C0107BEA1493C052000962A7 /* Postinstall_Net_SLE.sh */; };
 		C0107BF11493C096000962A7 /* Postinstall_Net_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C0107BEB1493C06E000962A7 /* Postinstall_Net_Extra.sh */; };
 		C0107BF41493E8B4000962A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0107BF21493E8B4000962A7 /* main.m */; };
-		C089E725148CF7FA00B30899 /* Postinstall_Extra_EFI_.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */; };
-		C089E726148CF7FA00B30899 /* Postinstall_SLE_.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */; };
-		C089E728148CF7FA00B30899 /* Preinstall_Net_Extra.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */; };
+		C018297414965E3000385055 /* License_eng.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C018297214965E2300385055 /* License_eng.txt */; };
+		C018297514965E3200385055 /* License_ru.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C018297314965E2300385055 /* License_ru.txt */; };
 		C089E72B148D029400B30899 /* EBKextPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C089E72A148D029400B30899 /* EBKextPackageBuilder.m */; };
 		C089E72C148D1AE100B30899 /* EBKextPackageBuilder.h in Sources */ = {isa = PBXBuildFile; fileRef = C089E729148D029400B30899 /* EBKextPackageBuilder.h */; };
 		C089E72D148D1AE100B30899 /* EBKextPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C089E72A148D029400B30899 /* EBKextPackageBuilder.m */; };
@@ -112,9 +111,6 @@
 			dstPath = scripts;
 			dstSubfolderSpec = 7;
 			files = (
-				C089E725148CF7FA00B30899 /* Postinstall_Extra_EFI_.sh in CopyFiles */,
-				C089E726148CF7FA00B30899 /* Postinstall_SLE_.sh in CopyFiles */,
-				C089E728148CF7FA00B30899 /* Preinstall_Net_Extra.sh in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +131,8 @@
 			dstSubfolderSpec = 16;
 			files = (
 				C0B803031490ED9000D60426 /* logo_bk.png in CopyFiles */,
+				C018297414965E3000385055 /* License_eng.txt in CopyFiles */,
+				C018297514965E3200385055 /* License_ru.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +163,8 @@
 		C0107BEB1493C06E000962A7 /* Postinstall_Net_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Net_Extra.sh; path = "src/Kexts additions/Scripts/Postinstall_Net_Extra.sh"; sourceTree = "<group>"; };
 		C0107BF21493E8B4000962A7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rpkg/main.m; sourceTree = SOURCE_ROOT; };
 		C0107BF31493E8B4000962A7 /* rpkg-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "rpkg-Prefix.pch"; path = "rpkg/rpkg-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		C018297214965E2300385055 /* License_eng.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License_eng.txt; path = "Shared resources/License_eng.txt"; sourceTree = SOURCE_ROOT; };
+		C018297314965E2300385055 /* License_ru.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License_ru.txt; path = "Shared resources/License_ru.txt"; sourceTree = SOURCE_ROOT; };
 		C071D8DB1493EBA600242323 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = Readme.md; path = ../Readme.md; sourceTree = "<group>"; };
 		C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Extra_EFI_.sh; path = "src/Kexts additions/Scripts/Postinstall_Extra_EFI_.sh"; sourceTree = "<group>"; };
 		C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_SLE_.sh; path = "src/Kexts additions/Scripts/Postinstall_SLE_.sh"; sourceTree = "<group>"; };
@@ -334,6 +334,8 @@
 		C0B802E9148FAAE900D60426 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C018297214965E2300385055 /* License_eng.txt */,
+				C018297314965E2300385055 /* License_ru.txt */,
 				C0107BF31493E8B4000962A7 /* rpkg-Prefix.pch */,
 			);
 			name = "Supporting Files";

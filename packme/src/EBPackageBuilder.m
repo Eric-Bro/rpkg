@@ -103,7 +103,7 @@
 {
     NSFileManager *file_manager = [NSFileManager defaultManager];
     if ( ! [file_manager fileExistsAtPath: [self pathToBuildUtility]]) {
-        NSLog(@"ERR0R: Unable to find the PackageBuilder binary file");
+        NSLog(@"ERR0R: Unable to find a PackageBuilder binary file");
         return NO;
     }
     pmdoc = [pmdoc stringByExpandingTildeInPath];
