@@ -24,8 +24,9 @@
 {
     if ((self = [super initWithTitle: title])) {
         _kexts = [[NSArray alloc] initWithArray: kexts];
+        [self setPathToBuildUtility: kEBInternalPackageMakerSubpath];
     } else self = nil;
-    
+
     return self;
 }
 
@@ -64,7 +65,7 @@
         /* -- -- -- -- -- -- -- -- -- */
         if ( ! [_disabledChoiseName isEqualToString: @"extra"]) {
             
-            EBPackageBuilderItem *extra_item = [[EBPackageBuilderItem alloc] initWithTitle: @"Install to Bootloader" 
+            EBPackageBuilderItem *extra_item = [[EBPackageBuilderItem alloc] initWithTitle: @"Install to Chameleon's Extra folder" 
                                                                              andIdentifier: EBFastRandomID];
             EBPackage *extra_scripts_package = [[EBPackage alloc] initWithID: EBFastRandomID 
                                                                      version: @"1.0" 
@@ -77,7 +78,7 @@
                 [extra_scripts_package setScript: [pkgs_scripts valueForKey: @"Preinstall_Net_Extra"] type: kPackagePreinstallScript raw: YES];
                 [extra_scripts_package setScript: [pkgs_scripts valueForKey: @"Postinstall_Net_Extra"] type: kPackagePostinstallScript raw: YES];
             } else {
-                [extra_scripts_package setScript: [pkgs_scripts valueForKey: @"Postinstall_Extra_EFI_"] type: kPackagePostinstallScript raw: YES];
+                [extra_scripts_package setScript: [pkgs_scripts valueForKey: @"Postinstall_Extra"] type: kPackagePostinstallScript raw: YES];
             }
             
             [extra_item addPackage: extra_scripts_package];
@@ -90,7 +91,6 @@
             /* -- -- -- -- -- -- -- -- -- */
             /* SLE section                */
             /* -- -- -- -- -- -- -- -- -- */
-            
             EBPackageBuilderItem *sle_item = [[EBPackageBuilderItem alloc] initWithTitle: @"Install to System/Library/Extensions" 
                                                                            andIdentifier: EBFastRandomID];
             [sle_item setSelectedAtLaunch: NO];

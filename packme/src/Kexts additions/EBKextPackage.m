@@ -129,7 +129,7 @@
     NSArray *all_raws_paths = [NSArray arrayWithObjects: 
                                EBFastResource(@"Postinstall_Net_Extra",@"sh"),
                                EBFastResource(@"Postinstall_Net_SLE",@"sh"),
-                               EBFastResource(@"Postinstall_Extra_EFI_", @"sh"),
+                               EBFastResource(@"Postinstall_Extra", @"sh"),
                                EBFastResource(@"Postinstall_SLE_", @"sh"),
                                EBFastResource(@"Preinstall_Net_Extra", @"sh"), nil];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];

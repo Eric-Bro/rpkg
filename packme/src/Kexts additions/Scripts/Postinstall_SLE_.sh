@@ -5,7 +5,7 @@ osver = ${osver:12:1}
 
 if [ -e ${3}[_tmp_folder_] ]; 
 then
-	sudo cp -a ${3}[_tmp_folder_]/[_bundlename_] ${3}/System/Library/Extensions/
+	sudo cp -a -f ${3}[_tmp_folder_]/[_bundlename_] ${3}/System/Library/Extensions/
 	sudo chown -R root:wheel ${3}/System/Library/Extensions/[_bundlename_]
 	sudo chmod -R 755 ${3}/System/Library/Extensions/[_bundlename_]
 	sudo rm -R ${3}[_tmp_folder_]

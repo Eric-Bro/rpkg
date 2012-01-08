@@ -2,7 +2,7 @@
 
 if [ -e ${3}[_tmp_folder_] ]; then
 rootkextpluginsdir="[_root_kext_]/Contents/PlugIns"
-sudo cp -a ${3}[_tmp_folder_]/[_bundlename_] ${3}/System/Library/Extensions/${rootkextpluginsdir}/
+sudo cp -a -f ${3}[_tmp_folder_]/[_bundlename_] ${3}/System/Library/Extensions/${rootkextpluginsdir}/
 osver=`sed -n '14p;14q' /System/Library/CoreServices/SystemVersion.plist`
 osver=${osver:12:1}
 

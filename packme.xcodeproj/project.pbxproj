@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0107BEC1493C096000962A7 /* Postinstall_Extra_EFI_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */; };
+		C002851B1498D2EE007FB63C /* License_eng.txt in Resources */ = {isa = PBXBuildFile; fileRef = C018297214965E2300385055 /* License_eng.txt */; };
+		C002851D1498D2EF007FB63C /* License_ru.txt in Resources */ = {isa = PBXBuildFile; fileRef = C018297314965E2300385055 /* License_ru.txt */; };
+		C0107BEC1493C096000962A7 /* Postinstall_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra.sh */; };
 		C0107BED1493C096000962A7 /* Postinstall_SLE_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */; };
 		C0107BEE1493C096000962A7 /* Preinstall_Net_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */; };
 		C0107BEF1493C096000962A7 /* Empty.strings in Resources */ = {isa = PBXBuildFile; fileRef = C089E736148DBB9300B30899 /* Empty.strings */; };
@@ -20,7 +22,7 @@
 		C089E72C148D1AE100B30899 /* EBKextPackageBuilder.h in Sources */ = {isa = PBXBuildFile; fileRef = C089E729148D029400B30899 /* EBKextPackageBuilder.h */; };
 		C089E72D148D1AE100B30899 /* EBKextPackageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C089E72A148D029400B30899 /* EBKextPackageBuilder.m */; };
 		C089E738148DBC0900B30899 /* Empty.strings in Resources */ = {isa = PBXBuildFile; fileRef = C089E736148DBB9300B30899 /* Empty.strings */; };
-		C089E739148E5E2A00B30899 /* Postinstall_Extra_EFI_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */; };
+		C089E739148E5E2A00B30899 /* Postinstall_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71D148CF07200B30899 /* Postinstall_Extra.sh */; };
 		C089E73A148E5E2A00B30899 /* Postinstall_SLE_.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */; };
 		C089E73C148E5E2A00B30899 /* Preinstall_Net_Extra.sh in Resources */ = {isa = PBXBuildFile; fileRef = C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */; };
 		C089E770148F220800B30899 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C089E76F148F220800B30899 /* GHUnit.framework */; };
@@ -60,7 +62,6 @@
 		C0B803001490ED6000D60426 /* logo_bk.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B802FF1490ED6000D60426 /* logo_bk.png */; };
 		C0B803011490ED6100D60426 /* logo_bk.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B802FF1490ED6000D60426 /* logo_bk.png */; };
 		C0B803031490ED9000D60426 /* logo_bk.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0B802FF1490ED6000D60426 /* logo_bk.png */; };
-		C0B803071492513500D60426 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		C0C80A50148229A3008D90A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C80A4F148229A3008D90A1 /* Foundation.framework */; };
 		C0C80A53148229A3008D90A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A52148229A3008D90A1 /* main.m */; };
 		C0C80A6314822A95008D90A1 /* EBPackageTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C80A6214822A95008D90A1 /* EBPackageTemplates.m */; };
@@ -105,6 +106,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C057A2A91498D6B400D61899 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C089E724148CF7DD00B30899 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,7 +176,7 @@
 		C018297214965E2300385055 /* License_eng.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License_eng.txt; path = "Shared resources/License_eng.txt"; sourceTree = SOURCE_ROOT; };
 		C018297314965E2300385055 /* License_ru.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License_ru.txt; path = "Shared resources/License_ru.txt"; sourceTree = SOURCE_ROOT; };
 		C071D8DB1493EBA600242323 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = Readme.md; path = ../Readme.md; sourceTree = "<group>"; };
-		C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Extra_EFI_.sh; path = "src/Kexts additions/Scripts/Postinstall_Extra_EFI_.sh"; sourceTree = "<group>"; };
+		C089E71D148CF07200B30899 /* Postinstall_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_Extra.sh; path = "src/Kexts additions/Scripts/Postinstall_Extra.sh"; sourceTree = "<group>"; };
 		C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Postinstall_SLE_.sh; path = "src/Kexts additions/Scripts/Postinstall_SLE_.sh"; sourceTree = "<group>"; };
 		C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Preinstall_Net_Extra.sh; path = "src/Kexts additions/Scripts/Preinstall_Net_Extra.sh"; sourceTree = "<group>"; };
 		C089E729148D029400B30899 /* EBKextPackageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBKextPackageBuilder.h; path = "src/Kexts additions/EBKextPackageBuilder.h"; sourceTree = "<group>"; };
@@ -272,7 +282,7 @@
 		C089E722148CF72100B30899 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				C089E71D148CF07200B30899 /* Postinstall_Extra_EFI_.sh */,
+				C089E71D148CF07200B30899 /* Postinstall_Extra.sh */,
 				C089E71F148CF0E500B30899 /* Postinstall_SLE_.sh */,
 				C089E723148CF77000B30899 /* Preinstall_Net_Extra.sh */,
 				C089E736148DBB9300B30899 /* Empty.strings */,
@@ -557,6 +567,7 @@
 				C0B802A6148FA70A00D60426 /* Headers */,
 				C0B802A7148FA70A00D60426 /* Resources */,
 				C0B803051490F87900D60426 /* ShellScript */,
+				C057A2A91498D6B400D61899 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -634,6 +645,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = C0C80A40148229A2008D90A1;
 			productRefGroup = C0C80A4C148229A3008D90A1 /* Products */;
@@ -653,13 +665,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0107BEC1493C096000962A7 /* Postinstall_Extra_EFI_.sh in Resources */,
+				C0107BEC1493C096000962A7 /* Postinstall_Extra.sh in Resources */,
 				C0107BED1493C096000962A7 /* Postinstall_SLE_.sh in Resources */,
 				C0107BEE1493C096000962A7 /* Preinstall_Net_Extra.sh in Resources */,
 				C0107BEF1493C096000962A7 /* Empty.strings in Resources */,
 				C0107BF01493C096000962A7 /* Postinstall_Net_SLE.sh in Resources */,
 				C0107BF11493C096000962A7 /* Postinstall_Net_Extra.sh in Resources */,
 				C0B802B0148FA70B00D60426 /* InfoPlist.strings in Resources */,
+				C002851D1498D2EF007FB63C /* License_ru.txt in Resources */,
+				C002851B1498D2EE007FB63C /* License_eng.txt in Resources */,
 				C0B803011490ED6100D60426 /* logo_bk.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,14 +682,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C089E739148E5E2A00B30899 /* Postinstall_Extra_EFI_.sh in Resources */,
+				C089E739148E5E2A00B30899 /* Postinstall_Extra.sh in Resources */,
 				C089E73C148E5E2A00B30899 /* Preinstall_Net_Extra.sh in Resources */,
 				C089E738148DBC0900B30899 /* Empty.strings in Resources */,
 				C089E73A148E5E2A00B30899 /* Postinstall_SLE_.sh in Resources */,
 				C0C80AD21485128F008D90A1 /* InfoPlist.strings in Resources */,
 				C0C80AD81485128F008D90A1 /* Credits.rtf in Resources */,
 				C0B803001490ED6000D60426 /* logo_bk.png in Resources */,
-				C0B803071492513500D60426 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +843,11 @@
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "DEBUG=1";
 				INFOPLIST_FILE = "packworks/packworks-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/packworks/PackageMaker/Contents/MacOS\"",
+					"\"$(SRCROOT)/packworks/AppleMaker/Contents/MacOS\"",
+				);
 				PRODUCT_NAME = packworks;
 				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = framework;
@@ -851,6 +869,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = __TARGET_FRAMEWORK__;
 				INFOPLIST_FILE = "packworks/packworks-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/packworks/PackageMaker/Contents/MacOS\"",
+					"\"$(SRCROOT)/packworks/AppleMaker/Contents/MacOS\"",
+				);
 				PRODUCT_NAME = packworks;
 				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = framework;
@@ -879,7 +902,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -895,7 +918,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -905,7 +928,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -915,7 +938,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;

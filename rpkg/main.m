@@ -6,13 +6,12 @@
 
 #import <Foundation/Foundation.h>
 #import <getopt.h>
-//#import "EBKextPackage.h"
 #import "packworks.h"
 #import "NSArray+Mapping.h"
 #import "NSString+Utils.h"
 
 #define APPNAME @"rpkg"
-#define APPVERSION @"0xd026"
+#define APPVERSION @"0xd028"
 #define VERSIONCOMMENT @""
 #define COPYRIGTHS @"TrigenSoftware, 2011 eric.broska@me.com"
 
@@ -142,7 +141,6 @@ int main (int argc, char * argv[])
         return [kp autorelease];
     }]];
     
-    
     EBKextPackageBuilder *builder = [[EBKextPackageBuilder alloc] initWithTitle: package_name ? package_name : @"Roxy extension package" 
                                                                        andKexts: kexts];
     [builder setBackgroundAlignMode: kEBLocaleAlignementBottomLeft];
@@ -156,9 +154,9 @@ int main (int argc, char * argv[])
         [en_locale addFileAtPath:en_readme withType:kEBLocaleReadmeFileType];
     }
     [en_locale addFileAtPath: EBPackworksResource(@"License_eng", @"txt") withType: kEBLocaleLicenseFileType];
-
     [builder addLocale:en_locale];
     [en_locale release];
+    
     EBPackageBuilderLocale * ru_locale = [[EBPackageBuilderLocale alloc] initWithLanguage: @"ru" andContent: @""];
     [ru_locale setBackgroundFile: EBPackworksResource(@"logo_bk", @"png")];
     [ru_locale addFileAtPath: EBPackworksResource(@"License_ru", @"txt") withType: kEBLocaleLicenseFileType];
@@ -170,7 +168,7 @@ int main (int argc, char * argv[])
 
     [builder setOrganizationIdentifier: @"org.rox"];
     [builder setPathToBuildUtility: maker_path ? maker_path 
-                                  : @"/Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker"];
+                                  : kEBInternalPackageMakerSubpath];
     [builder setUIMode: kPackageUIModeCustom];
     [builder setMinimumReqiuredOS: kPackageMinimumRequired105];
     [builder setInstallationDomainFlags: (kPackageDomainAnywhereFlag)];

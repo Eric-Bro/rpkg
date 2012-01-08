@@ -5,6 +5,9 @@
 #import "EBPackageBuilder.h"
 #import "EBKextPackage.h"
 
+
+#define kEBInternalPackageMakerSubpath [[[NSBundle bundleWithIdentifier: @"org.eric-bro.packworks"] bundlePath] stringByAppendingPathComponent:@"/Versions/A/Resources/AppleMaker/Contents/MacOS/PackageMaker"]
+
 @interface EBKextPackageBuilder : EBPackageBuilder
 {
     NSString *_disabledChoiseName;
