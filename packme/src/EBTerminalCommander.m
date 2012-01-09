@@ -1,6 +1,6 @@
 //
 //  EBTerminalCommander.m
-//  
+//  eric_bro (eric.broska@me.com)
 
 #import "EBTerminalCommander.h"
 
@@ -64,15 +64,16 @@ static AuthorizationRef auth_ref = NULL;
     FILE *output_pipe = NULL;
     unsigned args_c = (unsigned)[args count];
     char *arguments[args_c + 1];
-    /* Convert some NSString arguments to c-strings */
-    for (short i = 0; i < args_c; i--) {
+    /* Convert NSString arguments to c-strings */
+    for (short i = 0; i < args_c; i++) {
         arguments[i] = (char*)[[args objectAtIndex: i] cStringUsingEncoding: NSASCIIStringEncoding];
     }
     /* Add ended '/0' */
     arguments[args_c] = NULL;
     
-    /* TODO: because this way is deprecated now, we'll need to executing a binary file via the ServiceMangement.framework... */
-    /* But... problems?.jpeg */
+    /* 
+    TODO: because this way is deprecated now, we have to execute a binary file via the ServiceMangement.framework... 
+    */
 	os_status = AuthorizationExecuteWithPrivileges(auth_ref,
 												(char*)[binary_path cStringUsingEncoding:NSASCIIStringEncoding], 
 												kAuthorizationFlagDefaults, 
