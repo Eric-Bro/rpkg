@@ -110,7 +110,7 @@
         }
     }
     if (self.destination == kKextExtraFolderDestination) {
-        [result addObject: [all_avaliable valueForKey: @"Postinstall_Extra_EFI_"]];
+        [result addObject: [all_avaliable valueForKey: @"Postinstall_Extra"]];
     } else if (self.destination == kKextSLEFolderDestination) {
         [result addObject: [all_avaliable valueForKey: @"Postinstall_SLE_"]];
     }

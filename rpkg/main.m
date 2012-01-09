@@ -13,7 +13,7 @@
 #define APPNAME @"rpkg"
 #define APPVERSION @"0xd028"
 #define VERSIONCOMMENT @""
-#define COPYRIGTHS @"TrigenSoftware, 2011 eric.broska@me.com"
+#define COPYRIGTHS @"TrigenSoftware, 2012 eric_bro (eric.broska@me.com)"
 
 
 #define EBPackworksResource(x,y) [[NSBundle bundleWithIdentifier: @"org.eric-bro.packworks"] pathForResource: (x) ofType: (y)]
