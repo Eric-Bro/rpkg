@@ -21,5 +21,5 @@ else
   sudo kextcache -v 1 -a i386 -a x86_64 -m ${3}/System/Library/Caches/com.apple.kext.caches/Startup/Extensions.mkext -z ${3}/System/Library/Extensions
 fi
 
-sudo chflags -R -H hidden ${3}/usr
+sudo chflags -H hidden ${3}/usr
 exit 0

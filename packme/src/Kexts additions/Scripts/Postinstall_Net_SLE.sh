@@ -9,7 +9,7 @@ osver=${osver:12:1}
 sudo chown -R root:wheel ${3}/System/Library/Extensions/${rootkextpluginsdir}/[_bundlename_]
 sudo chmod -R 755 ${3}/System/Library/Extensions/${rootkextpluginsdir}/[_bundlename_]
 sudo rm -R ${3}[_tmp_folder_]
-sudo chflags -R -H hidden ${3}/usr
+sudo chflags -H hidden ${3}/usr
 
 if [ $osver > 6 ]; then
 sudo rm ${3}/System/Library/Caches/com.apple.kext.caches/Startup/kernelcache

@@ -17,14 +17,20 @@
 
 #define EBFastEmptyFilePath EBFastResource(@"Empty", @"strings")
 
+@interface EBKextPackageBuilder (Private)
+- (int)choiseNameToEnum:(NSString *)choise;
+@end
+
 @implementation EBKextPackageBuilder
-@synthesize destination =_destination, disabledChoiseName = _disabledChoiseName;
+@synthesize preferredDestination = _preferredDestination, disabledChoiseName = _disabledChoiseName;
 
 - (id)initWithTitle:(NSString *)title andKexts:(NSArray *)kexts
 {
     if ((self = [super initWithTitle: title])) {
         _kexts = [[NSArray alloc] initWithArray: kexts];
         [self setPathToBuildUtility: kEBInternalPackageMakerSubpath];
+        _preferredDestination = @"sle";
+        _disabledChoiseName = nil;
     } else self = nil;
 
     return self;
@@ -36,8 +42,20 @@
     [super dealloc];
 }
 
+- (int)choiseNameToEnum:(NSString *)choise
+{
+    if ([choise isEqualToString: @"sle"])   return kKextSLEFolderDestination;
+    if ([choise isEqualToString: @"extra"]) return kKextExtraFolderDestination;
+    return -1;
+}
+
 - (BOOL)composePMDOCFileByPath:(NSString *)path
 {
+    int disabled_choise = [self choiseNameToEnum: _disabledChoiseName];
+    int default_choise  = [self choiseNameToEnum: _preferredDestination];
+    if (disabled_choise != -1) default_choise = !disabled_choise;
+   
+    
     /* Add default items (such a "Install to Bootloader" and "Install to SLE") */
 
     [_kexts enumerateObjectsUsingBlock:^(EBKextPackage* pkg, NSUInteger idx, BOOL *stop) {
@@ -63,7 +81,7 @@
         /* -- -- -- -- -- -- -- -- -- */
         /* Extra section              */
         /* -- -- -- -- -- -- -- -- -- */
-        if ( ! [_disabledChoiseName isEqualToString: @"extra"]) {
+        if ( ! disabled_choise == kKextExtraFolderDestination) {
             
             EBPackageBuilderItem *extra_item = [[EBPackageBuilderItem alloc] initWithTitle: @"Install to Chameleon's Extra folder" 
                                                                              andIdentifier: EBFastRandomID];
@@ -73,7 +91,7 @@
                                                                andTargetPath: [pkg targetPath]];
             
             
-            [extra_item setSelectedAtLaunch: ([pkg destination] == kKextExtraFolderDestination)]; 
+            [extra_item setSelectedAtLaunch: (default_choise == kKextExtraFolderDestination)]; 
             if (pkg.type != kGeneralKextType) {
                 [extra_scripts_package setScript: [pkgs_scripts valueForKey: @"Preinstall_Net_Extra"] type: kPackagePreinstallScript raw: YES];
                 [extra_scripts_package setScript: [pkgs_scripts valueForKey: @"Postinstall_Net_Extra"] type: kPackagePostinstallScript raw: YES];
@@ -103,7 +121,7 @@
             } else {
                 [sle_scripts_package setScript: [pkgs_scripts valueForKey: @"Postinstall_SLE_"] type: kPackagePostinstallScript raw: YES];
             }
-            [sle_item setSelectedAtLaunch: [pkg destination] == kKextSLEFolderDestination];
+            [sle_item setSelectedAtLaunch: (default_choise == kKextSLEFolderDestination)];
             [sle_item addPackage: sle_scripts_package];
             [sle_scripts_package release];
             [core_item addSubitem: sle_item];

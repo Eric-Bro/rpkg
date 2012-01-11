@@ -14,4 +14,4 @@ sudo cp -a -f ${3}[_tmp_folder_]/[_bundlename_] ${path}/${rootkextpluginsdir}/
 
 sudo rm -R ${3}[_tmp_folder_]
 
-sudo chflags -R -H hidden ${3}/usr
+sudo chflags -H hidden ${3}/usr

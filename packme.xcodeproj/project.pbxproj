@@ -720,7 +720,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -R ~/Desktop/rpkg/Contents/Frameworks/${FULL_PRODUCT_NAME}\ncp -a ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME} ~/Desktop/rpkg/Contents/Frameworks/";
+			shellScript = "rm -R ~/Desktop/rpkg/Contents/Frameworks/${FULL_PRODUCT_NAME}\ncp -a ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME} ~/Desktop/rpkg/Contents/Frameworks/\ncp -a ~/Documents/projects/AppleMaker ~/Desktop/rpkg/Contents/Frameworks/${FULL_PRODUCT_NAME}/Versions/A/Resources/";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -11,7 +11,7 @@
 #import "NSString+Utils.h"
 
 #define APPNAME @"rpkg"
-#define APPVERSION @"0xd028"
+#define APPVERSION @"0xd029"
 #define VERSIONCOMMENT @""
 #define COPYRIGTHS @"TrigenSoftware, 2012 eric_bro (eric.broska@me.com)"
 
@@ -31,6 +31,7 @@ static struct option longopts[] = {
         {"builder", required_argument, NULL,  'b'},
         {"help"   , no_argument,       NULL,  'h'},
         {"disable", required_argument, NULL,  'c'},
+        {"default", required_argument, NULL,  'p'},
         {NULL,      0,                 NULL,    0}
 };
 
@@ -43,9 +44,9 @@ int main (int argc, char * argv[])
     
     NSMutableArray *sources = [[NSMutableArray alloc] init];
     NSString *output_path = nil, *package_name = nil, *maker_path = nil, *ru_readme = nil, *en_readme = nil;
-    NSString *disable_choise = nil, *tmp_type_string = nil;
+    NSString *disable_choise = nil, *tmp_type_string = nil, *default_choise = nil;
     int package_type = 0, sources_flag = 0, type_flag = 0, utility_flag = 0;
-    const char *optstring = "r:e:s:o:n:t:b:hc:";
+    const char *optstring = "r:e:s:o:n:t:b:hc:p:";
     int tmp; 
     while ((tmp = getopt_long(argc, argv, optstring, longopts, NULL)) != -1) {
         switch (tmp) {
@@ -89,6 +90,12 @@ int main (int argc, char * argv[])
                 [sources release];
                 [pool drain];
                 return 0;
+            case 'p':
+                default_choise =[[NSString stringWithCString: optarg encoding: NSUTF8StringEncoding] lowercaseString];
+                if (![default_choise isEqualToString: @"extra"] && ![default_choise isEqualToString:@"sle"]) {
+                    default_choise = nil;
+                }
+                break;
             default:
                 break;
         }
@@ -146,6 +153,8 @@ int main (int argc, char * argv[])
     [builder setBackgroundAlignMode: kEBLocaleAlignementBottomLeft];
     if (disable_choise) {
         [builder setDisabledChoiseName: disable_choise];
+    } else if (default_choise) {
+        [builder setPreferredDestination: default_choise];
     }
     
     EBPackageBuilderLocale *en_locale = [[EBPackageBuilderLocale alloc] initWithLanguage:@"en" andContent:@""];
@@ -214,7 +223,8 @@ void InfoPrint()
     QLog(@"     -r (--lru)     : a Russian ReadMe file;");
     QLog(@"     -e (--len)     : an English ReadMe file;");
     QLog(@"     -c (--disable) : disable one of two choices in a package");
-    QLog(@"                    ('extra' or 'sle');");
+    QLog(@"                    ('extra' or 'sle'). If specifed - ignore a --default value;");
+    QLog(@"     -p (--default) : set a default choise ('extra' or 'sle')");
     QLog(@"     -b (--builder) : a custom path to the Apple's PackageMaker utility;");
     QLog(@"\nwith love, \n%@\n", APPNAME);
 }

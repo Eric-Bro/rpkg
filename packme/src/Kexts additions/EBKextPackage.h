@@ -13,8 +13,8 @@ enum EBKextBitDepth {
 }EBKextBitDepth;
 
 enum EBKextDestination {
-    kKextExtraFolderDestination = 0x1,
-    kKextSLEFolderDestination   = 0x2
+    kKextExtraFolderDestination = 0,
+    kKextSLEFolderDestination   = 1
 }EBKextDestination;
 
 enum EBKextPackageType {

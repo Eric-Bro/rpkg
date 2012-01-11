@@ -11,11 +11,13 @@
 @interface EBKextPackageBuilder : EBPackageBuilder
 {
     NSString *_disabledChoiseName;
+    NSString *_preferredDestination;
 @protected
     NSArray *_kexts;
-    enum EBKextDestination _destination;
+    NSString *destination;
 }
-@property enum EBKextDestination destination;
+//@property enum EBKextDestination destination;
+@property (nonatomic, retain) NSString *preferredDestination;
 @property (nonatomic, retain) NSString *disabledChoiseName;
 
 - (id)initWithTitle:(NSString *)title andKexts:(NSArray *)kexts;
